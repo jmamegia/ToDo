@@ -7,7 +7,7 @@ CREATE TABLE tasks (
     responsible VARCHAR(30),
     name VARCHAR(30),
     description VARCHAR(255),
-    image VARCHAR(200),
+    image VARCHAR(2000),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     priority INT(1) DEFAULT '3'
 )

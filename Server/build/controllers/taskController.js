@@ -32,7 +32,7 @@ class TaskController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('INSERT INTO tasks set ?', [req.body]);
-            res.status(404).json({ text: 'Game ' + req.body.name + ' created' });
+            res.json({ text: 'Task ' + req.body.name + ' created' });
         });
     }
     delete(req, res) {

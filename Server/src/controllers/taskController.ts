@@ -14,7 +14,7 @@ class TaskController {
     }
     public async create (req :Request, res: Response) {
         await db.query('INSERT INTO tasks set ?', [req.body])
-        res.status(404).json({text:'Game '+ req.body.name +' created'})
+        res.json({text:'Task '+ req.body.name +' created'})
     }
 
     public async delete (req :Request, res: Response) {
