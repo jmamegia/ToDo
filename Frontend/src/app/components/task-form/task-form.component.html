@@ -21,7 +21,7 @@
             <option value="2">Medium</option>
             <option value="3">Low</option>
           </select>
-          <button class="btn btn-success" (click)="edit==false ? addTask() : updateTask(task.id)">Add</button>
+          <button class="btn btn-success" (click)="edit==false ? addTask() : updateTask(task.id)">Save</button>
         </div>
       </form>
     </div>
@@ -30,7 +30,7 @@
 
   <div class="card card-body text-center flex-fill col-md-4">
     <h3 class="d-inline">{{task.name == '' ? 'Task name' : task.name}}</h3><small class="d-inline">{{task.created_at | date: 'yyy-MM-dd'}}</small>
-    <img [src]="task.image=='' ? 'https://as2.ftcdn.net/jpg/00/89/87/57/500_F_89875707_7qPplyj1uUFN9nJwcnMcEWfTLPSRo1Rl.jpg' : task.image" class="card-img-top card-img-fluid" alt="">
+    <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
     <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
     <p>{{task.description == '' ? 'Task description' : task.description}}</p>
   </div>

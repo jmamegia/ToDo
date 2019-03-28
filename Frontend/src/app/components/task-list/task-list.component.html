@@ -5,7 +5,7 @@
       <button class="btn btn-danger p-1" (click)="deleteTask(task.id)"><i class="far fa-trash-alt"></i></button>
     </div>
     <div class="card-body">
-        <img [src]="task.image=='' ? 'https://as2.ftcdn.net/jpg/00/89/87/57/500_F_89875707_7qPplyj1uUFN9nJwcnMcEWfTLPSRo1Rl.jpg' : task.image" class="card-img-top card-img-fluid" alt="">
+        <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
         <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
         <p>{{task.description == '' ? 'Task description' : task.description}}</p>
       <a [routerLink]="['/tasks/edit', task.id]" class="btn btn-info btn-block">Edit</a>
