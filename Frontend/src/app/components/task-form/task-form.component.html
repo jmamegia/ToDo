@@ -30,8 +30,10 @@
 
   <div class="card card-body text-center flex-fill col-md-4">
     <h3 class="d-inline">{{task.name == '' ? 'Task name' : task.name}}</h3><small class="d-inline">{{task.created_at | date: 'yyy-MM-dd'}}</small>
-    <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
-    <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
+    <div class="col-md-6 offset-md-3">
+      <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
+    </div>
+      <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
     <p>{{task.description == '' ? 'Task description' : task.description}}</p>
   </div>
 

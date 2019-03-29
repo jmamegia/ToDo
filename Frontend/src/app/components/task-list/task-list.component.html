@@ -1,14 +1,18 @@
-<div class="col-md-4" *ngFor="let task of tasks">
-  <div class="card text-center">
-    <div class="card-header d-flex bg-dark text-white justify-content-between align-items-center">
-      {{task.name == '' ? 'No named task' : task.name}}
-      <button class="btn btn-danger p-1" (click)="deleteTask(task.id)"><i class="far fa-trash-alt"></i></button>
-    </div>
-    <div class="card-body">
-        <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
-        <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
-        <p>{{task.description == '' ? 'Task description' : task.description}}</p>
-      <a [routerLink]="['/tasks/edit', task.id]" class="btn btn-info btn-block">Edit</a>
+<div class="d-flex align-items-stretch justify-content-around flex-column flex-md-row">
+  <div class="col-md-4" *ngFor="let task of tasks">
+    <div class="card text-center flex-fill">
+      <div class="card-header d-flex bg-dark text-white justify-content-between align-items-center">
+        {{task.name == '' ? 'No named task' : task.name}}
+        <button class="btn btn-danger p-1" (click)="deleteTask(task.id)"><i class="far fa-trash-alt"></i></button>
+      </div>
+      <div class="card-body">
+          <div class="col-md-6 offset-md-3">
+            <img [src]="task.image=='' ? 'assets/images/question.png' : task.image" class="card-img-top card-img-fluid" alt="">
+          </div>
+          <p>{{task.responsible == '' ? 'Responsible' : task.responsible }}</p>
+          <p>{{task.description == '' ? 'Task description' : task.description}}</p>
+        <a [routerLink]="['/tasks/edit', task.id]" class="btn btn-info btn-block">Edit</a>
+      </div>
     </div>
   </div>
 </div>
